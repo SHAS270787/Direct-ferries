@@ -1,0 +1,19 @@
+{
+  "name": "playwright-direct-ferries",
+  "version": "1.0.0",
+  "main": "index.js",
+"scripts": {
+  "test": "cucumber-js --require-module ts-node/register --require src/stepDefinitions/**/*.ts --require src/support/**/*.ts"
+},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@cucumber/cucumber": "^12.1.0",
+    "@playwright/test": "^1.54.2",
+    "playwright": "^1.54.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2"
+  }
+}
