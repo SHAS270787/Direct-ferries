@@ -1,0 +1,31 @@
+name: Playwright Cucumber Tests
+
+on:
+  push:
+    branches: 
+      - playwright-cucumber-setup
+  pull_request:
+    branches: 
+      - playwright-cucumber-setup
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps
+
+      - name: Run Cucumber Tests
+        run: npm test
