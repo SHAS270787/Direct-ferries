@@ -26,5 +26,5 @@ jobs:
       - name: Install Playwright browsers
         run: npx playwright install --with-deps
 
-      - name: Run tests
-        run: npx cucumber-js --require-module ts-node/register --require src/stepDefinitions/**/*.ts --require src/support/**/*.ts
+      - name: Run Cucumber tests
+        run: npx @cucumber/cucumber --require-module ts-node/register --require src/stepDefinitions/**/*.ts --require src/support/**/*.ts
